@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-from discord.ext import client
 
 class Control(commands.Cog):
 
@@ -10,7 +9,7 @@ class Control(commands.Cog):
     @commands.command()
     @commands.is_owner()
     async def rename(self, ctx, name):
-        await client.user.edit(username=name)
+        await ctx.guild.me.edit(nick=name)
 
 def setup(client):
     client.add_cog(Control(client))

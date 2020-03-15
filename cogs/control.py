@@ -8,7 +8,7 @@ class Control(commands.Cog):
 
     @commands.command()
     @commands.is_owner()
-    async def rename(self, ctx, name):
+    async def rename(self, ctx, *, name):
         await ctx.guild.me.edit(nick=name)
 
 def setup(client):

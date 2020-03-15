@@ -10,16 +10,16 @@ class Roulette(commands.Cog):
 
 
     @commands.command()
-    async def roulette(self, ctx):
+    async def roulette(self, ctx : discord.Message, target : discord.Member):
         print(f'{ctx.author} has initiated roulette')
         await ctx.channel.send('rolling...')
         if random.randint(1, 6) == random.randint(1, 6):
-            print(f'{ctx.author} has died.')
-            await ctx.channel.send(f'{ctx.author} failed the vibe check')
-            await ctx.author.kick()
+            print(f'{target} has died.')
+            await ctx.channel.send(f'{target} failed the vibe check')
+            await target.kick()
         else:
-            print(f'{ctx.author} has passed.')
-            await ctx.channel.send(f'{ctx.author} passed the vibe check')
+            print(f'{target} has passed.')
+            await ctx.channel.send(f'{target} passed the vibe check')
 
 def setup(client):
     client.add_cog(Roulette(client))

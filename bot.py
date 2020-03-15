@@ -52,4 +52,4 @@ async def wake_up(ctx):
     await ctx.send('im here and im queer')
     print('logged in')
 
-client.run('Njg4MTY4MDYyMjI2MjY4MTcz.XmyRPw.ftRQrrzWND2uUN4osgPEX4D7ZSE')
+client.run('Njg4MTY4MDYyMjI2MjY4MTcz.Xm2POg.DiwmR-7hnQjPOk8epxpu4sNRX54')

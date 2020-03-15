@@ -4,7 +4,6 @@ import os
 
 client = commands.Bot(command_prefix = '!')
 
-
 # Events
 @client.event
 async def on_ready():
@@ -53,4 +52,12 @@ async def wake_up(ctx):
     await ctx.send('im here and im queer')
     print('logged in')
 
-client.run('')
+@client.command()
+@commands.is_owner()
+async def reload(ctx, extension):
+    client.unload_extension(f'cogs.{extension}')
+    client.load_extension(f'cogs.{extension}')
+    print(f'{extension} reloaded')
+    await ctx.send(f'{extension} reloaded')
+
+client.run('Njg4MTY4MDYyMjI2MjY4MTcz.Xm2lGw.m44gVsUgFrapP8tZVVIzHc1yok0')

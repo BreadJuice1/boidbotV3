@@ -11,5 +11,12 @@ class Control(commands.Cog):
     async def rename(self, ctx, *, name):
         await ctx.guild.me.edit(nick=name)
 
+    @commands.command()
+    async def purge(self, ctx : discord.channel, amount=None):
+        print('starting purge')
+        await ctx.purge(limit=amount)
+        print(f'purged {amount}')
+        await ctx.send(f'purged {amount} messages')
+
 def setup(client):
     client.add_cog(Control(client))

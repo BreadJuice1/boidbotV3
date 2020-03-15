@@ -14,8 +14,6 @@ class Bruh(commands.Cog):
         if ctx.mention_everyone:
             await ctx.channel.send('<:bruh:688525458194694178>')
     
-        await client.process_commands(ctx)
-    
     # commands
     @commands.command()
     async def bruh(self, ctx):

@@ -60,4 +60,4 @@ async def reload(ctx, extension):
     print(f'{extension} reloaded')
     await ctx.send(f'{extension} reloaded')
 
-client.run('Njg4MTY4MDYyMjI2MjY4MTcz.Xm2lGw.m44gVsUgFrapP8tZVVIzHc1yok0')
+client.run('Njg4MTY4MDYyMjI2MjY4MTcz.Xm5fNw.dSGZMbPQrQ8GH9cXwDbquxAyqi8')

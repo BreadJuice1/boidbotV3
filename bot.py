@@ -12,7 +12,7 @@ async def on_ready():
 @client.event
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
-        await ctx.send(f'{ctx.author} is a boid')
+        await ctx.send(f'{ctx.author.mention} is a boid')
 
 # Commands
 @client.command()
@@ -60,4 +60,4 @@ async def reload(ctx, extension):
     print(f'{extension} reloaded')
     await ctx.send(f'{extension} reloaded')
 
-client.run('Njg4MTY4MDYyMjI2MjY4MTcz.Xm5fNw.dSGZMbPQrQ8GH9cXwDbquxAyqi8')
+client.run('Njg4MTY4MDYyMjI2MjY4MTcz.XpJNNA.vKewP3IdN9_cesqGVwEUDGTxQyQ')

@@ -12,12 +12,13 @@ class Bruh(commands.Cog):
         print(f'{ctx.created_at} | {ctx.author} | {ctx.content}')
         print(f'{ctx.mention_everyone}')
         if ctx.mention_everyone:
-            await ctx.channel.send('<:bruh:688525458194694178>')
+            await ctx.channel.send('<:bruh:688520811455184912>')
     
     # commands
     @commands.command()
     async def bruh(self, ctx):
         await ctx.send('Bruh!')
+
 
 def setup(client):
     client.add_cog(Bruh(client))
